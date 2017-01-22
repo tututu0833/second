@@ -7,16 +7,23 @@
     <body>
         <h1>javascript</h1>
             <script>
-                if(1==1){
-                    document.write("참참참!");
-                }else{
-                    document.write("yo");
+                function text(name='메롱'){
+                    document.write(name+"<br/>");
                 }
+                text("메롱메롱메롱");
+                text("메롱메롱메롱");
+                text("메롱메롱메롱");
+                text();
             </script>
-
         <h1>php</h1>
+        <ul>
             <?php
-
+                $i = 0;
+                while($i<10){
+                    echo "<li>hihi </li>";
+                    $i += 1;
+                }
             ?>
+        </ul>
     </body>
 </html>
