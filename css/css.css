@@ -1,3 +1,11 @@
+.black{
+    background-color:black;
+    color:white;
+}
+.white{
+    background-color:white;
+    color:black;
+}
 .header{
     border-bottom:1px grey solid;
     padding: 30px;
@@ -17,7 +25,6 @@ article{
     }
 h2{
     font-size:50px;
-    color:blue;
     margin-top:0px;
 }
 .index{
@@ -25,4 +32,7 @@ border:1px solid black;
 float:left;
 font-size:50px;
 margin: 0px;
+}
+div.buttons{
+    float:right;
 }
