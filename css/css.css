@@ -27,12 +27,9 @@ h2{
     font-size:50px;
     margin-top:0px;
 }
-.index{
-border:1px solid black;
-float:left;
-font-size:50px;
-margin: 0px;
-}
 div.buttons{
     float:right;
+}
+.header img{
+    float: right;
 }
