@@ -33,8 +33,12 @@ $result = mysqli_query($conn,'SELECT * FROM topic'); /*이거 모니터에서 SE
         </div>
         <article>
                 <?php
-                    if (empty($_GET['id'])==false){
-                        echo file_get_contents('php/'.$_GET['id'].'.txt');
+                    if(empty($_GET['id']) == false){
+                        $sql = 'SELECT * FROM topic WHERE id='.$_GET['id'];
+                        $result = mysqli_query($conn, $sql);
+                        $row = mysqli_fetch_assoc($result);
+                        echo '<h2>'.$row['title'].'</h2>';
+                        echo $row['description'];
                     }
                 ?>
         </article>

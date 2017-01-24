@@ -18,10 +18,12 @@
     }
 .nav ol{
     list-style: none;
+    padding : 0px;
     }
 article{
     float:left;
     padding:20px;
+    width:500px;
     }
 h2{
     font-size:50px;
