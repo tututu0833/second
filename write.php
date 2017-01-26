@@ -28,24 +28,15 @@ $result = mysqli_query($conn,'SELECT * FROM topic'); /*이거 모니터에서 SE
         <div class='buttons'>
             <input type="button" value="white" onclick="document.getElementById('body').className='white'" />
             <input type="button" value="black" onclick="document.getElementById('body').className='black'" />
-            <button onclick='window.location="/write.php"'>글쓰러 가기</button>
         </div>
         <div class='toggle-color'>
         </div>
         <article>
-                <?php
-                    if(empty($_GET['id']) == false){
-                        $id = $_GET['id'];
-                        $sql = 'SELECT * FROM topic WHERE id='.$id;
-                        $result = mysqli_query($conn, $sql);
-                        $row = mysqli_fetch_assoc($result);
-                        echo '<h2>'.$row['title'].'</h2>';
-                        echo $row['description'];
-                ?>
-                <p><button onclick='window.location="/php/delete.php?id=<?php echo $id ?>"'>꼴뵈기 싫으면 글삭제해도됨</button></p>
-                <?php
-                    }
-                ?>
+            <form action='/php/upload.php' method='POST'>
+                <p>제목 : <input type='text' name='title' /></p> 작성자: <input type='text' name='author' placeholder='이름' />
+                <p>내용 : <textarea rows='10' cols='50' name='contents' placeholder='내용을 작성해주세요'></textarea></p>
+                <input type="submit" value="submit" />
+            </form>
         </article>
     </body>
 </html>
